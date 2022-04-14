@@ -1,36 +1,25 @@
 #include<iostream>
 using namespace std;
 
-class Operator{
-	public:
-		long faktorial();
-		long faktorial(int n);
-		
-	private:
-		int n;
+class pengeluaran{
+public:
+	long uang_saku();
+	int i;
+private:
+	int n, a, spp, nabung , jjn, total;
 };
 
-long Operator::faktorial(){
-	int n = 6;
-	long fak =1;
-	for(int i=1; i<=n; i++){
-		fak= fak * i;
-	}
-	return fak;
-};
-
-long Operator::faktorial(int n){
-	if(n == 0 || n == 1){
-		return(1);
-	} else{
-		return (n*faktorial(n-1));
-	}
-};
+long pengeluaran::uang_saku(){
+	cout<<"masukan uang dalam satu bulan = "; cin>>n;
+  	cout<<"masukan total pembayaran spp satu bulan = "; cin>>spp;
+ 	cout<<"jajan dalam satu bulan = "; cin>>jjn;
+  	total=n-spp-jjn;
+  	cout<<"sisa uang atau tabungan = ";
+  	return total ;
+}
 
 int main(){
-	Operator x;
-	cout<<x.faktorial();
-	cout<<endl;
-	cout<<x.faktorial(7);
-	return 0;
+	pengeluaran b;
+	cout<<b.uang_saku();
+  	cout<<endl;	
 }
